@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import HeaderNav from './components/HeaderNav.js';
+import HeaderPage from './components/HeaderPage.js';
 import Footer from './components/Footer.js';
 
 
@@ -99,6 +100,12 @@ function App() {
                 <Routes>
                     <Route path="/" element = { 
                         <>
+                            <HeaderPage 
+                                titre="Bienvenue !" 
+                                parag="Ms. Fabulous vous propose une gamme de produits exclusifs, faits de façon artisanale, à partir d’ingrédients de première qualité." 
+                                bouton="Voir nos pâtisseries" 
+                                linkTo="/pastry"
+                             />
                         </>
                     } />
                 </Routes>
@@ -106,6 +113,11 @@ function App() {
                 <Routes>
                     <Route path="/pastry" element = { 
                         <>
+                            <HeaderPage 
+                                titre="Nos pâtisseries" 
+                                parag="Nous vous proposons une variété de gâteaux, de pâtisseries et de desserts confectionnés avec soin, à partir d’ingrédients de première qualité et sans aucun agent de conservation. Respectant les méthodes traditionnelles, nos artisans savent assembler les saveurs, les textures, pour vous offrir une variété de produits gourmands uniques à Ms. Fabulous." 
+                                bouton="Ajouter" 
+                             />
                         </>
                     } />
                 </Routes>
@@ -113,6 +125,10 @@ function App() {
                 <Routes>
                     <Route path="/contact" element = { 
                         <>
+                            <HeaderPage 
+                                titre="Nous joindre" 
+                                parag='Vous avez des questions sur nos produits ou notre entreprise? N’hésitez pas à communiquer avec votre succursale!' 
+                             />
                         </>
                     } />
                 </Routes>

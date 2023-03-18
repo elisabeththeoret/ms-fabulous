@@ -2,7 +2,7 @@
 /**
  * Footer 
  * 
- * @returns 
+ * @return 
  */
 const Footer = () => {
 

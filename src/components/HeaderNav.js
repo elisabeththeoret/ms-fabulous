@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 /**
  * HeaderNav 
  * 
- * @returns 
+ * @return 
  */
 const HeaderNav = () => {
 
