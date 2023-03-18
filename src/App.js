@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import HeaderNav from './components/HeaderNav.js';
 import HeaderPage from './components/HeaderPage.js';
 import Footer from './components/Footer.js';
+import Home from './components/Home.js';
 
 
 /**
@@ -106,6 +107,7 @@ function App() {
                                 bouton="Voir nos pâtisseries" 
                                 linkTo="/pastry"
                              />
+                            <Home />
                         </>
                     } />
                 </Routes>
