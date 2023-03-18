@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poiret+One&display=swap');
+
+@import './css/colors.css';
+@import './css/typography.css';
+@import './css/utilities.css';
+
+
+/* ---------- GENERIQUE ---------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- BASE - HERITAGE ---------- */
+html {
+    font-size: 18px;
+    line-height: 1.625;
+    font-weight: 300;
+    color: var(--marron);
+    background-color: #FCFCFB;
+}
+
+#root {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- LIENS ET BOUTONS ---------- */
+a {
+    display: flex;
+    text-underline-offset: 5px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+a, 
+button {
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+a:hover, 
+button:hover {
+    cursor: pointer;
+}
+
+/* ---------- BUTTON - BOX EFFECT ---------- */
+.btn {
+    font-weight: 600;
+    border: 2px solid var(--light_green);
+    border-radius: 40vh;
+    padding: 12px 25px;
+    max-width: max-content;
+    text-decoration: none;
+    
+    box-shadow: inset 0 0 0 0 var(--rosemauve);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: inset 0 -200px 0 0 var(--light_green);
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    position: sticky;
+    top: 0;
+    height: 65px;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header {
+    border-bottom: 1px solid var(--dark_marron);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* ---------- NAV PRINCIPALE ---------- */
+.nav-principale a {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+}
+
+.nav-principale a:hover {
+    color: var(--white);
+    box-shadow: inset 0 -200px 0 0 var(--dark_marron);
+}
+
+.nav-principale .logo {
+    font-family: var(--font-poiret);
+    font-size: 1.375em;
+    text-transform: uppercase;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.nav-principale .logo.btn {
+    color: var(--rosemauve);
+    background-color: var(--marron);
+    box-shadow: inset 0 0 0 0 var(--light_rosemauve);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.nav-principale .logo.btn:hover {
+    box-shadow: inset 400px 0 0 0 var(--dark_marron);;
+}
+
+/* ---------- APP ---------- */
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.app > * {
+    padding: 60px 40px;
+}
+
+/* ---------- SECTION PRINCIPALE (HEADER) ---------- */
+.app > header {
+    gap: 20px;
+    padding: 140px 40px 80px 40px;
+}
+
+.app > header {
+    gap: 30px;
+    align-items: center;
+}
+
+.app > header p {
+    text-align: center;
+    max-width: 60ch;
+}
+
+.app > header .btn {
+    margin-top: 30px;
+}
+
+/* ---------- BOITE ---------- */
+.boite {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+/* ---------- CARTE ---------- */
+.carte button {
+    width: 100%;
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    border: 2px solid var(--light_green);
+    border-radius: 20px;
+    box-shadow: inset 0 -200px 0 0 var(--light_green);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.carte button:hover {
+    color: var(--marron);
+    box-shadow: inset 0 0 0 0 var(--rosemauve);
+}
+
+.carte small {
+    font-family: var(--font-poiret);
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    margin-top: auto;
+    background-color: var(--light_marron);
+    bottom: 0;
+}

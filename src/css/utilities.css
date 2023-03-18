@@ -1,0 +1,42 @@
+/* ---------- FLEX ---------- */
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.flex.egal > * {
+    flex: 1;
+}
+
+/* ---------- GRILLE ---------- */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+/* ---------- ESPACEMENT ---------- */
+.gap-mini {
+    gap: 10px;
+}
+.gap-trespetit {
+    gap: 20px;
+}
+.gap-trespetit {
+    gap: 30px;
+}
+.gap-normal {
+    gap: 40px;
+}
+.gap-moyen {
+    gap: 60px;
+}
+.gap-large {
+    gap: 80px;
+}
