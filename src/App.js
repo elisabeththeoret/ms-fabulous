@@ -4,6 +4,7 @@ import HeaderNav from './components/HeaderNav.js';
 import HeaderPage from './components/HeaderPage.js';
 import Footer from './components/Footer.js';
 import Home from './components/Home.js';
+import Contact from './components/Contact.js';
 
 
 /**
@@ -131,6 +132,7 @@ function App() {
                                 titre="Nous joindre" 
                                 parag='Vous avez des questions sur nos produits ou notre entreprise? N’hésitez pas à communiquer avec votre succursale!' 
                              />
+                            <Contact />
                         </>
                     } />
                 </Routes>
