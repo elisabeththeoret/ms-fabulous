@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import HeaderNav from './components/HeaderNav.js';
 import HeaderPage from './components/HeaderPage.js';
@@ -16,15 +16,57 @@ import AddPastry from './components/AddPastry.js';
 function App() {
 
     /**
+     * Data 
+     */
+    const [ pastries, setPastries ] = useState([]);
+    useEffect(() => {
+        const getPastries = async () => {
+            const pastriesFromServer = await fetchPastries();
+            setPastries(pastriesFromServer);
+        };
+        getPastries();
+    });
+
+    /**
+     * Fetch pastries in database server 
+     * 
+     * @return { array } data 
+     */
+    const fetchPastries = async () => {
+        const res = await fetch("http://localhost:5000/pastries");
+        const data = await res.json();
+        return data;
+    };
+
+    /**
+     * Fetch pastry by id in database server 
+     * 
+     * @param { int } id 
+     * 
+     * @return { array } data 
+     */
+    const fetchPastryById = async (id) => {
+        const res = await fetch(`http://localhost:5000/pastries/${ id }`);
+        const data = await res.json();
+        return data;
+    };
+
+    /**
      * Add 
      * 
      * @param { object } pastry 
      */
-    const addPastry = ( pastry ) => {
+    const addPastry = async ( pastry ) => {
         // console.log(pastry);
-        const id = Math.floor(Math.random() * 1000);
-        console.log(id);
-        const newPastry = { id, ...pastry };
+        const res = await fetch("http://localhost:5000/pastries", {
+            method: 'POST', 
+            headers: {
+                'Content-type': 'application/json'
+            }, 
+            body: JSON.stringify(pastry), 
+        });
+        const newPastry = await res.json();
+        
         setPastries([ ...pastries, newPastry ]);
     };
 
@@ -33,8 +75,12 @@ function App() {
      * 
      * @param { int } id 
      */
-    const deletePastry = ( id ) => {
+    const deletePastry = async ( id ) => {
         // console.log(id);
+        await fetch(`http://localhost:5000/pastries/${ id }`, {
+            method: 'DELETE', 
+        });
+        
         setPastries(pastries.filter((pastry) => pastry.id !== id));
     };
 
