@@ -16,9 +16,13 @@
 }
 
 /* ---------- GRILLE ---------- */
-.grille {
+.grille-sm {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.grille-lg {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 
 /* ---------- ESPACEMENT ---------- */
@@ -28,7 +32,7 @@
 .gap-trespetit {
     gap: 20px;
 }
-.gap-trespetit {
+.gap-petit {
     gap: 30px;
 }
 .gap-normal {
@@ -39,4 +43,15 @@
 }
 .gap-large {
     gap: 80px;
+}
+
+/* ---------- ALIGNEMENT ---------- */
+.align-center {
+    align-items: center !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.justify-center {
+    justify-content: center;
 }

@@ -18,6 +18,10 @@ p, a, button, small, span {
     font-family: inherit;
 }
 
+form, label, input, select, textarea {
+    font-family: inherit;
+}
+
 /* ---------- FONT SIZE, WEIGHT, LINE HEIGHT ---------- */
 h1 {
     font-size: 4em;
@@ -52,10 +56,18 @@ span {
     margin-top: auto;
 }
 
-/* ---------- TYPO CLASS ---------- */
-.align-center {
-    align-items: center !important;
+a, button {
+    font-size: inherit;
+    line-height: inherit;
 }
-.text-center {
-    text-align: center !important;
+
+/* ---------- FORM ---------- */
+label {
+    font-size: 1.25em;
+}
+
+input, textarea {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
 }

@@ -38,6 +38,7 @@ a {
 }
 
 button {
+    display: flex;
     background-color: transparent;
     border: none;
 }
@@ -148,6 +149,7 @@ button:hover {
 
 /* ---------- BOITE ---------- */
 .boite {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -158,31 +160,66 @@ button:hover {
     border-radius: 20px;
 }
 
-/* ---------- CARTE ---------- */
-.carte button {
+.boite .icone {
+    position: absolute;
+    font-size: 1.75em;
+    right: 20px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.boite .icone:hover {
+    color: var(--white);
+    font-size: 1.9375em;
+}
+
+.boite span {
+    padding-top: 30px;
+}
+
+/* ---------- FORM ---------- */
+form {
     width: 100%;
-    min-height: 175px;
+}
+
+.form-control {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
-    border: 2px solid var(--light_green);
-    border-radius: 20px;
-    box-shadow: inset 0 -200px 0 0 var(--light_green);
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    margin-bottom: 20px;
 }
 
-.carte button:hover {
+input, 
+textarea {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.form-control input {
+    background-color: var(--white);
+}
+
+textarea {
+    resize: none;
+    flex: 1;
+}
+
+form .btn {
+    color: var(--white);
+    background-color: transparent;
+    border-color: var(--marron);
+    box-shadow: inset 0 200px 0 0 var(--marron);
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+form .btn:hover {
     color: var(--marron);
     box-shadow: inset 0 0 0 0 var(--rosemauve);
-}
-
-.carte small {
-    font-family: var(--font-poiret);
-    font-size: 1em;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* ---------- FOOTER ---------- */

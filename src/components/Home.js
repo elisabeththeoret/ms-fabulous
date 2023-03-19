@@ -13,7 +13,7 @@ const Home = () => {
         <>
             <section className="flex col">
                 <h2>Catégories</h2>
-                <div className="grille gap-trespetit">
+                <div className="grille-lg gap-trespetit">
                     <div className="boite bg-light_marron border-light_marron">
                         <h4>Nos gâteaux sur mesure</h4>
                         <p>Quelle est l'occasion? Découvrez nos fabuleux gâteaux faits sur mesure!</p>
